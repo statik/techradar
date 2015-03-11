@@ -15,7 +15,7 @@ radar.add(pv.Dot)
        .strokeStyle("#ccc")
        .anchor("top")       
        .add(pv.Label).text(function(d) { return d.name;})
-       .font("18px ProximaNova-Bold");
+       .font("20px ProximaNova-Bold");
 
 //quadrant lines -- vertical
 radar.add(pv.Line)
@@ -71,7 +71,7 @@ for (var i = 0; i < radar_data.length; i++) {
          .text(  radar_data[i].quadrant )		 
          .strokeStyle( radar_data[i].color )
          .fillStyle( radar_data[i].color )                    
-         .font("18px ProximaNova-Light")
+         .font("18px ProximaNova-Regular")
             .add( pv.Dot )            
             .def("i", radar_data[i].top )
             .data(radar_data[i].items)            
@@ -85,7 +85,7 @@ for (var i = 0; i < radar_data.length; i++) {
             .anchor("right")                
                 .add(pv.Label) 
                 .text(function(d) {return radar_quadrant_ctr++ + ". " + d.name;} )
-                .font("12px ProximaNova-Light");
+                .font("13px ProximaNova-Light");
 }      
        
  radar.anchor('radar');
